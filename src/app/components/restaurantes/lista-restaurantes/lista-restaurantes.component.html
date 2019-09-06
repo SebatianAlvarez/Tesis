@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-body">
+      <h6 class="text-center">Lista de Restaurantes Registrados</h6>
+      <table class="table table-sm table-hover">
+        <tbody>
+          <tr *ngFor="let restaurante of restaurantList">
+            <td>{{restaurante.nombre}}</td>
+            <td>{{restaurante.foto}}</td>
+            <td>
+              <a class="btn btn-secondary text-white" (click)="onEdit(restaurante)">
+                <i class="far fa-edit"></i>
+              </a>              
+              <a class="btn btn-danger text-white" (click)="onDelete(restaurante.$key)">
+                <i class="fas fa-trash-alt"></i>
+              </a>
+              
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

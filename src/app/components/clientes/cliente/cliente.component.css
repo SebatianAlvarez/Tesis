@@ -1,0 +1,19 @@
+.btn-social{
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    border-color: rgba(0,0,0,0.2);
+    padding-block: 23px;
+    
+}
+
+.btn-facebook{
+    background: #3b5998;
+}
+
+.btn-google{
+    background: #dd4b39;
+}

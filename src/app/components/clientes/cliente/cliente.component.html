@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <!-- BOOTSTRAP 4--> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- FONTAWASOME 5-->
+  <script src="https://kit.fontawesome.com/22cc46a4f6.js"></script> 
+  </head>
+  <body>
+      <div class="card">
+          <div class="card-body">
+            <form #clienteForm="ngForm" (ngSubmit)="onSubmit(clienteForm)">
+              <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="clienteService.selectedCliente.$key">
+              <div class="form-group">
+                  <h4 style="text-align: center">REGISTRATE</h4>
+                </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="nombreCliente"
+                  #nombre="ngModel"
+                  [(ngModel)]="clienteService.selectedCliente.nombreCliente"
+                  placeholder="Nombre"
+                >
+              </div>
+              <div class="form-group">
+              <input
+                  type="text"
+                  class="form-control"
+                  name="apodoCliente"
+                  #foto="ngModel"
+                  [(ngModel)]="clienteService.selectedCliente.apodoCliente"
+                  placeholder="Apodo (opcional)"
+                >
+              </div>
+              <div class="form-group">
+              <input
+                  type="text"
+                  class="form-control"
+                  name="edadCliente"
+                  #horario="ngModel"
+                  [(ngModel)]="clienteService.selectedCliente.edadCliente"
+                  placeholder="Edad"
+                >
+              </div>
+              <div class="form-group">
+              <input
+                  type="text"
+                  class="form-control"
+                  name="correoCliente"
+                  #direccion="ngModel"
+                  [(ngModel)]="clienteService.selectedCliente.correoCliente"
+                  placeholder="Email"
+                >
+              </div>
+              <div class="form-group">
+              <input
+                  type="password"
+                  class="form-control"
+                  name="contraCliente"
+                  #capacidad="ngModel"
+                  [(ngModel)]="clienteService.selectedCliente.contraCliente"
+                  placeholder="Contraseña"
+                >
+              </div>
+      
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-plus-circle"></i> Registrarse
+                </button>
+                <button class="btn btn-secondary" type="reset" (click)="resetForm(clienteForm)">
+                  <i class="fas fa-sync-alt"></i> Cancelar
+                </button>
+              </div>
+              <div class="form-group">
+                  <h6 style="text-align: center">OR</h6>
+                  <br>
+                  <button class="btn btn-block btn-social btn-facebook" (click)="onLoginFacebook()"></button>
+                  <span class="fa fa-facebook"></span>
+                  FACEBOOK
+                  <button class="btn btn-block btn-social btn-google" (click)="onLoginGoogle()"></button>
+                  <span class="fa fa-google"></span>
+                  GOOGLE
+                </div>
+            </form>
+          </div>
+        </div>
+        
+  </body>
+</html>
+
+
