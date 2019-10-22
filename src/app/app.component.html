@@ -1,12 +1,15 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <nav class="navbar navbar-dark bg-dark">
 
   <a href="#" class="navbar-brand">
     Muertos de Hambre
   </a>
+  <a routerLink="ListaClientes" class="navbar-brand" style="text-align: right">Revisar Clientes</a>
+  <a routerLink="ListaRestaurantes" class="navbar-brand" style="text-align: right">Revisar Restaurantes</a>
   <a href="#" class="navbar-brand" style="text-align: right">SALIR</a>
 </nav>
-<app-inicio></app-inicio>
-<app-restaurantes></app-restaurantes>
-<app-clientes></app-clientes>
+
+
+<router-outlet></router-outlet>
+
+
 
