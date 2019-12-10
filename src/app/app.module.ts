@@ -6,6 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
+//Geolocation
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 // firebase
 
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -23,6 +26,7 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 import { ListaClientesComponent } from './components/clientes/lista-clientes/lista-clientes.component';
 import { ClienteComponent } from './components/clientes/cliente/cliente.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { MapaComponent } from './components/mapa/mapa.component'
 
 // services
 
@@ -39,7 +43,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
     ClientesComponent,
     ListaClientesComponent,
     ClienteComponent,
-    InicioComponent
+    InicioComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
     ToastrModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [ ClienteService, RestauranteService, AngularFireAuth],
+  providers: [ ClienteService, RestauranteService, AngularFireAuth, Geolocation],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
